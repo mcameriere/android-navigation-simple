@@ -26,3 +26,15 @@ Add NavHostFragment to activity_main.xml
 
 * id is mandatory
 * defaultNavHost to handle backstack
+
+Add MoreFragment
+
+Add new destination MoreFragment to navigation_graph with <code>android:id="@+id/homeFragment"</code>
+
+Add Button to HomeFragment
+
+Trigger navigation to the MoreFragment from code:
+
+    nextButton.setOnClickListener {
+        findNavController().navigate(R.id.moreFragment)
+    }
