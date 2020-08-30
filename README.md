@@ -38,3 +38,41 @@ Trigger navigation to the MoreFragment from code:
     nextButton.setOnClickListener {
         findNavController().navigate(R.id.moreFragment)
     }
+
+Configure SafeArgs
+
+In the top-level build.gradle:
+
+    classpath "androidx.navigation:navigation-safe-args-gradle-plugin:2.3.0"
+
+In the app-level build.gradle:
+
+    apply plugin: 'androidx.navigation.safeargs.kotlin'
+
+    android {
+        ...
+        kotlinOptions {
+            jvmTarget = JavaVersion.VERSION_1_8
+        }
+    }
+    
+Add argument to destination in navigation_graph.xml
+
+     <fragment
+            android:id="@+id/moreFragment"
+            android:name="com.example.androidnavigationsimple.MoreFragment"
+            android:label="fragment_more"
+            tools:layout="@layout/fragment_more">
+
+        <argument
+            android:name="someNumber"
+            app:argType="integer" />
+
+    </fragment>
+     
+When you build the project the plugin generates MoreFragmentArgs class.
+
+Now from MoreFragment you can retrieve the arguments as follows:
+
+    val args: MoreFragmentArgs by navArgs()
+    val number = args.someNumber
