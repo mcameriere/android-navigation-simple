@@ -35,9 +35,11 @@ Add Button to HomeFragment
 
 Trigger navigation to the MoreFragment from code:
 
-    nextButton.setOnClickListener {
-        findNavController().navigate(R.id.moreFragment)
-    }
+```java
+nextButton.setOnClickListener {
+    findNavController().navigate(R.id.moreFragment)
+}
+```
 
 Configure SafeArgs
 
@@ -58,17 +60,19 @@ In the app-level build.gradle:
     
 Add argument to destination in navigation_graph.xml
 
-     <fragment
-            android:id="@+id/moreFragment"
-            android:name="com.example.androidnavigationsimple.MoreFragment"
-            android:label="fragment_more"
-            tools:layout="@layout/fragment_more">
+```xml
+<fragment
+        android:id="@+id/moreFragment"
+        android:name="com.example.androidnavigationsimple.MoreFragment"
+        android:label="fragment_more"
+        tools:layout="@layout/fragment_more">
 
-        <argument
-            android:name="someNumber"
-            app:argType="integer" />
+    <argument
+        android:name="someNumber"
+        app:argType="integer" />
 
-    </fragment>
+</fragment>
+```
      
 When you build the project the plugin generates MoreFragmentArgs class.
 
