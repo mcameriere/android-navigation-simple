@@ -80,3 +80,29 @@ Now from MoreFragment you can retrieve the arguments as follows:
 
     val args: MoreFragmentArgs by navArgs()
     val number = args.someNumber
+    
+Create action from HomeFragment to MoreFragment
+
+Action is in the fragment you navigate *from*, whereas arguments are in the fragment you navigate *to*.
+
+```xml
+<fragment
+    android:id="@+id/homeFragment"
+    android:name="com.example.androidnavigationsimple.HomeFragment"
+    android:label="fragment_home"
+    tools:layout="@layout/fragment_home" >
+
+    <action
+        android:id="@+id/action_homeFragment_to_moreFragment"
+        app:destination="@id/moreFragment" />
+
+</fragment>
+```
+
+When you build the project, the navigation-safe-args-gradle-plugin generates the HomeFragmentDirections class.
+
+Trigger the navigation from code as follows:
+
+```java
+val action = HomeFragmentDirections.actionHomeFragmentToMoreFragment(10)
+findNavController().navigate(action)
