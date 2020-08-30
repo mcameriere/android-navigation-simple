@@ -14,9 +14,15 @@ Add new destination HomeFragment to navigation_graph
 
 Add NavHostFragment to activity_main.xml
 
-    <fragment
-      android:id="@+id/navHostFragment"
-      ...
-      android:name="androidx.navigation.fragment.NavHostFragment"
-      ...
-      app:navGraph="@navigation/navigation_graph" />
+```xml
+<fragment
+    android:id="@+id/navHostFragment"
+    android:name="androidx.navigation.fragment.NavHostFragment"
+          ...
+    app:defaultNavHost="true"
+          ...
+    app:navGraph="@navigation/navigation_graph" />
+```
+
+* id is mandatory
+* defaultNavHost to handle backstack
