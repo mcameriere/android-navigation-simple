@@ -102,18 +102,22 @@ In navigation_graph.xml, add argument to moreFragment
 In MoreFragment, you can now read "someNumber" argument
 
 ```java
-private var someNumber: Int? = null
+class MoreFragment : Fragment() {
 
-override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
-    arguments?.let {
-        someNumber = it.getInt("someNumber")
+    private var someNumber: Int? = null
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        arguments?.let {
+            someNumber = it.getInt("someNumber")
+        }
     }
-}
 
-override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-    super.onViewCreated(view, savedInstanceState)
-    textView.text = someNumber.toString()
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        textView.text = someNumber.toString()
+    }
+    
 }
 ```
 
