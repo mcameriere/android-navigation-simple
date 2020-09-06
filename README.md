@@ -24,7 +24,7 @@ Add NavHostFragment to activity_main.xml
     app:navGraph="@navigation/navigation_graph" />
 ```
 
-Run the app
+Run the app: the HomeFragment is displayed.
 
 ## Add a second destination
 
@@ -61,11 +61,13 @@ override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 }
 ```
 
-Run the app
+Run the app: click More on HomeFragment navigates to MoreFragment.
 
-## Handle backstack
+## Configure NavHostFragment to handle backstack
 
-In activity_main.xml, set <code>defaultNavHost</code> attribute to <code>true</code>
+If you click back on MoreFragment, the app is closed.
+
+To handle backstack, configure NavHostFragment in activity_main.xml.
 
 ```xml
 <fragment
@@ -74,6 +76,8 @@ In activity_main.xml, set <code>defaultNavHost</code> attribute to <code>true</c
         ...
         app:navGraph="@navigation/navigation_graph" />
 ```
+
+Run app: click back on MoreFragment to navigate *back* to HomeFragment
 
 ## Configure SafeArgs
 
