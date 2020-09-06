@@ -61,15 +61,19 @@ override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 }
 ```
 
+Run the app
+
 ## Handle backstack
 
 In activity_main.xml, set <code>defaultNavHost</code> attribute to <code>true</code>
 
+```xml
 <fragment
         ...
         app:defaultNavHost="true"
         ...
         app:navGraph="@navigation/navigation_graph" />
+```
 
 ## Configure SafeArgs
 
