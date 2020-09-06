@@ -71,6 +71,7 @@ To handle backstack, configure NavHostFragment in activity_main.xml.
 
 ```xml
 <fragment
+        android:id="@+id/navHostFragment"
         ...
         app:defaultNavHost="true"
         ...
