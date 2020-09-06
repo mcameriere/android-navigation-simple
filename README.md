@@ -79,13 +79,52 @@ To handle backstack, configure NavHostFragment in activity_main.xml.
 
 Run app: click back on MoreFragment to navigate *back* to HomeFragment
 
+## Add argument to destination
+
+In navigation_graph.xml, add argument to moreFragment
+
+```xml
+<fragment
+    android:id="@+id/moreFragment"
+    android:name="com.example.androidnavigationsimple.MoreFragment"
+    android:label="fragment_more"
+    tools:layout="@layout/fragment_more">
+
+    <argument
+        android:name="someNumber"
+        app:argType="integer"
+        android:defaultValue="10"/>
+
+</fragment>
+```
+
+In MoreFragment, you can now read the argument
+
+```java
+override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    arguments?.let {
+        someNumber = it.getInt("someNumber")
+    }
+}
+```
+
+Display the argument in a TextView
+
+```java
+override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    super.onViewCreated(view, savedInstanceState)
+    textView.text = someNumber.toString()
+}
+```
+
 ## Configure SafeArgs
 
-In the top-level build.gradle:
+In the top-level <code>build.gradle</code>
 
     classpath "androidx.navigation:navigation-safe-args-gradle-plugin:2.3.0"
 
-In the app-level build.gradle:
+In the app-level <code>build.gradle</code>
 
     apply plugin: 'androidx.navigation.safeargs.kotlin'
 
@@ -96,22 +135,6 @@ In the app-level build.gradle:
         }
     }
     
-Add argument to destination in navigation_graph.xml
-
-```xml
-<fragment
-        android:id="@+id/moreFragment"
-        android:name="com.example.androidnavigationsimple.MoreFragment"
-        android:label="fragment_more"
-        tools:layout="@layout/fragment_more">
-
-    <argument
-        android:name="someNumber"
-        app:argType="integer" />
-
-</fragment>
-```
-     
 When you build the project the plugin generates MoreFragmentArgs class.
 
 Now from MoreFragment you can retrieve the arguments as follows:
