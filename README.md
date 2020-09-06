@@ -142,6 +142,8 @@ In MoreFragment you can now retrieve the "someNumber" argument in a type-safe wa
 class MoreFragment : Fragment() {
 
     private val args: MoreFragmentArgs by navArgs()
+    
+    ...
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
