@@ -134,13 +134,22 @@ In the app-level <code>build.gradle</code>
         }
     }
     
-When you build the project the plugin generates MoreFragmentArgs class.
+When you build the project the SafeArgs plugin generates <code>MoreFragmentArgs</code> class.
 
-Now from MoreFragment you can retrieve the arguments as follows:
+In MoreFragment you can now retrieve the "someNumber" argument in a type-safe way
 
 ```java
-val args: MoreFragmentArgs by navArgs()
-val number = args.someNumber
+class MoreFragment : Fragment() {
+
+    private val args: MoreFragmentArgs by navArgs()
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        
+        textView.text = args.someNumber.toString()
+    }
+
+}
 ```
 
 
