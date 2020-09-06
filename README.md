@@ -4,7 +4,7 @@ Start a new Android Studio project (Empty Activity)
 
 Add resource file navigation_graph.xml
 
-Android will prompt you to add the following dependencies:
+Android Studio will prompt you to add the following dependencies:
 - androidx.navigation:navigation-fragment-ktx:2.3.0
 - androidx.navigation:navigation-ui-ktx:2.3.0
 
