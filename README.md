@@ -50,7 +50,7 @@ Add Button to HomeFragment
     android:text="More" />
 ```
 
-Trigger navigation to the MoreFragment from code:
+In HomeFragment, trigger navigation to MoreFragment
 
 ```java
 override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
