@@ -98,20 +98,18 @@ In navigation_graph.xml, add argument to moreFragment
 </fragment>
 ```
 
-In MoreFragment, you can now read the argument
+In MoreFragment, you can now read "someNumber" argument
 
 ```java
+private var someNumber: Int? = null
+
 override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     arguments?.let {
         someNumber = it.getInt("someNumber")
     }
 }
-```
 
-Display the argument in a TextView
-
-```java
 override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
     textView.text = someNumber.toString()
@@ -139,31 +137,10 @@ When you build the project the plugin generates MoreFragmentArgs class.
 
 Now from MoreFragment you can retrieve the arguments as follows:
 
-    val args: MoreFragmentArgs by navArgs()
-    val number = args.someNumber
-    
-Create action from HomeFragment to MoreFragment
-
-Action is in the fragment you navigate *from*, whereas arguments are in the fragment you navigate *to*.
-
-```xml
-<fragment
-    android:id="@+id/homeFragment"
-    android:name="com.example.androidnavigationsimple.HomeFragment"
-    android:label="fragment_home"
-    tools:layout="@layout/fragment_home" >
-
-    <action
-        android:id="@+id/action_homeFragment_to_moreFragment"
-        app:destination="@id/moreFragment" />
-
-</fragment>
+```java
+val args: MoreFragmentArgs by navArgs()
+val number = args.someNumber
 ```
 
-When you build the project, the navigation-safe-args-gradle-plugin generates the HomeFragmentDirections class.
 
-Trigger the navigation from code as follows:
 
-```java
-val action = HomeFragmentDirections.actionHomeFragmentToMoreFragment(10)
-findNavController().navigate(action)
