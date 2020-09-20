@@ -2,19 +2,33 @@
 
 ## Add navigation graph with single destination HomeFragment
 
-Start a new Android Studio project (Empty Activity)
+* Launch **Android Studio** and click **Start a new Android Studio project**
+* In **Select a Project Template** select **Empty Activity**
+* Name your project
+* Choose language **Kotlin**
+* Click **Finish**
 
-Add new resource file navigation_graph.xml
+## Add new resource file navigation_graph.xml
 
-Android Studio will prompt you to add the following project dependencies:
-- androidx.navigation:navigation-fragment-ktx:2.3.0
-- androidx.navigation:navigation-ui-ktx:2.3.0
+In res folder add new **Android Resource File**
 
-Add HomeFragment
+Android Studio will prompt you:
 
-Add new destination HomeFragment to navigation_graph
+    Add Project Dependency
 
-Add NavHostFragment to activity_main.xml
+    This operation requires the libraries
+    - androidx.navigation:navigation-fragment-ktx:+,
+    - androidx.navigation:navigation-ui-ktx:+.
+    
+    Would you like to add these now?
+
+Click **OK** to accept
+
+## Add HomeFragment
+
+## Add new destination HomeFragment to navigation_graph
+
+## Add NavHostFragment to activity_main.xml
 
 ```xml
 <fragment
