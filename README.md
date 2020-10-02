@@ -211,3 +211,14 @@ class MoreFragment : Fragment() {
 
 </navigation>
 ```
+
+Build the project. SafeArgs plugin generates the class **HomeFragmentDirections**.
+
+You can now trigger the navigation using **NavDirections**
+
+```java
+buttonMore.setOnClickListener {
+    val directions = HomeFragmentDirections.actionHomeFragmentToMoreFragment(8)
+    findNavController().navigate(directions)
+}
+```
