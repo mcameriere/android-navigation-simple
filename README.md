@@ -79,9 +79,9 @@ override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
 Run the app: click More on HomeFragment navigates to MoreFragment.
 
-## Configure NavHostFragment to handle backstack
+**Problem:** If you click back on MoreFragment, the app is closed.
 
-If you click back on MoreFragment, the app is closed.
+## Configure NavHostFragment to handle backstack
 
 To handle backstack, configure NavHostFragment in activity_main.xml.
 
