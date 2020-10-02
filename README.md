@@ -1,5 +1,7 @@
 # android-navigation-simple
 
+A simple Android app with a navigagation graph and two destinations.
+
 ## Start a new Android Studio project
 
 * Launch **Android Studio** and click **Start a new Android Studio project**
