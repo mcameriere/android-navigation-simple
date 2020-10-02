@@ -160,7 +160,7 @@ In the app-level <code>build.gradle</code>
     
 When you build the project the SafeArgs plugin generates <code>MoreFragmentArgs</code> class.
 
-In MoreFragment you can now retrieve the "someNumber" argument in a type-safe way
+In MoreFragment you can now retrieve the **someNumber** argument in a type-safe way.
 
 ```java
 class MoreFragment : Fragment() {
