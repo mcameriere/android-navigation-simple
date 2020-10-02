@@ -177,3 +177,37 @@ class MoreFragment : Fragment() {
 
 }
 ```
+
+## Add action to homeFragment destination
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.androidsimplenavigation.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_moreFragment"
+            app:destination="@id/moreFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/moreFragment"
+        android:name="com.example.androidsimplenavigation.MoreFragment"
+        android:label="fragment_more"
+        tools:layout="@layout/fragment_more" >
+        <argument
+            android:name="someNumber"
+            app:argType="integer"
+            android:defaultValue="10" />
+    </fragment>
+
+</navigation>
+```
