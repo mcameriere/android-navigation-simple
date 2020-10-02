@@ -1,6 +1,6 @@
 # android-navigation-simple
 
-## Add navigation graph with single destination HomeFragment
+## Start a new Android Studio project
 
 * Launch **Android Studio** and click **Start a new Android Studio project**
 * In **Select a Project Template** select **Empty Activity**
@@ -171,6 +171,3 @@ class MoreFragment : Fragment() {
 
 }
 ```
-
-
-
