@@ -64,7 +64,7 @@ Add a new **Fragment (Blank)** with name **MoreFragment**
 
 ```xml
 <Button
-    android:id="@+id/moreButton"
+    android:id="@+id/buttonMore"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="More" />
@@ -75,7 +75,7 @@ In HomeFragment, trigger navigation to MoreFragment
 ```java
 override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
-    moreButton.setOnClickListener {
+    buttonMore.setOnClickListener {
         findNavController().navigate(R.id.moreFragment)
     }
 }
