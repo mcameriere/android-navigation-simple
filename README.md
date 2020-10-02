@@ -28,7 +28,7 @@ Click **OK** to accept
 
 ## Add HomeFragment
 
-Add new Fragment (Blank) with Fragment Name **HomeFragment**
+Add a new **Fragment (Blank)** with name **HomeFragment**
 
 ## Add new destination HomeFragment to navigation_graph
 
