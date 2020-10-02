@@ -4,7 +4,7 @@ A simple Android app with a navigation graph and two destinations.
 
 The two destinations are the fragments **HomeFragment** and **MoreFragment**.
 
-MoreFragment will receive an **integer** argument with name **someNumber** and default value **10**.
+MoreFragment will receive an **integer** argument with name **someNumber** and a default value of **10**.
 
 ## Start a new Android Studio project
 
