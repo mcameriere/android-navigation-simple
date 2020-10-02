@@ -32,6 +32,9 @@ Add a new **Fragment (Blank)** with name **HomeFragment**
 
 ## Add new destination HomeFragment to navigation_graph
 
+* Open navigation_graph.xml, select **Design**
+* Click **New Destionation** and select **fragment_home**
+
 ## Add NavHostFragment to activity_main.xml
 
 ```xml
