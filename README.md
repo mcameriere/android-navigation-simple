@@ -56,17 +56,7 @@ Add a new **Fragment (Blank)** with name **MoreFragment**
 * Open navigation_graph.xml, select **Design**
 * Click **New Destination** and select **fragment_more**
 
-Add new destination MoreFragment to navigation_graph
-
-```xml
-<fragment
-    android:id="@+id/moreFragment"
-    android:name="com.example.androidnavigationsimple.MoreFragment"
-    android:label="fragment_more"
-    tools:layout="@layout/fragment_more" />
-```
-
-Add Button to HomeFragment
+## Add Button to HomeFragment
 
 ```xml
 <Button
