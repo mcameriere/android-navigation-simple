@@ -2,6 +2,10 @@
 
 A simple Android app with a navigagation graph and two destinations.
 
+The two destinations are HomeFragment and MoreFragment.
+
+MoreFragment will receive an integer argument with name **someNumber** and default value **10**.
+
 ## Start a new Android Studio project
 
 * Launch **Android Studio** and click **Start a new Android Studio project**
