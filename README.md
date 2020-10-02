@@ -28,6 +28,8 @@ Click **OK** to accept
 
 ## Add HomeFragment
 
+Add new Fragment (Blank) with Fragment Name **HomeFragment**
+
 ## Add new destination HomeFragment to navigation_graph
 
 ## Add NavHostFragment to activity_main.xml
